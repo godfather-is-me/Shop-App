@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
           fontFamily: 'Lato',
         ),
         home: ProductOverviewScreen(),
+        // use routers? - using listeners
         routes: {
           ProductDetailScreen.routename: (ctx) => ProductDetailScreen(),
         },
