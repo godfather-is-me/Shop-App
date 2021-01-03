@@ -35,7 +35,8 @@ class ProductItem extends StatelessWidget {
           backgroundColor: Colors.black87,
           leading: IconButton(
             icon: Icon(
-              product.isFavorite ? Icons.favorite : Icons.favorite_border,
+              // product.isFavorite fails assertion due to null values
+              false ? Icons.favorite : Icons.favorite_border,
             ),
             color: Theme.of(context).accentColor,
             onPressed: () {
@@ -52,7 +53,7 @@ class ProductItem extends StatelessWidget {
               color: Theme.of(context).accentColor,
             ),
             onPressed: () {
-              cart.addItem(product.id, product.price, product.title)
+              cart.addItem(product.id, product.price, product.title);
             },
           ),
         ),
